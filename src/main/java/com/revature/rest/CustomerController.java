@@ -27,5 +27,13 @@ public class CustomerController {
 			return new ClientMessage("Something went wrong");
 		}
 	}
-	
+	@PostMapping("/find")
+	public User find(@RequestBody String name) {
+		User newUser = userService.getUser(name);
+		if(newUser != null) {
+			return newUser;
+		} else {
+			return new User();
+		}
+	}
 }
