@@ -25,7 +25,7 @@ import com.revature.service.UserService;
 
 @RestController("userController")
 @CrossOrigin(origins = "http://localhost:4200")
-@RequestMapping(path = "/user", produces = {MediaType.APPLICATION_JSON_VALUE})
+@RequestMapping(path = "/users", produces = {MediaType.APPLICATION_JSON_VALUE})
 public class UserControllerImpl implements UserController {
 
 	private static Logger logger = Logger.getLogger(UserControllerImpl.class);

@@ -16,6 +16,8 @@ import com.revature.service.UserService;
 @RequestMapping(path = "/user")
 public class CustomerController {
 	
+	//DONT USE THIS
+	
 	@Autowired
 	private UserService userService;
 	
@@ -28,12 +30,14 @@ public class CustomerController {
 		}
 	}
 	@PostMapping("/find")
-	public User find(@RequestBody String name) {
-		User newUser = userService.getUser(name);
-		if(newUser != null) {
-			return newUser;
+	public User find(@RequestBody String username) {
+		User newUser = userService.getUser(username);
+		System.out.println(newUser);
+		/*if(newUser != null) {
+			return new User(newUser.getId(), newUser.getUsername(), newUser.getPassword());
 		} else {
 			return new User();
-		}
+		}*/
+		return newUser;
 	}
 }
