@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.revature.model.Starship;
+import com.revature.model.SwapiStarship;
 import com.revature.service.StarshipService;
 
 @RestController("starshipController")
@@ -22,7 +22,7 @@ public class StarshipControllerImpl {
 	private StarshipService starshipService;
 	
 	@GetMapping("/all")
-	public List<Starship> findAllStarships() {
+	public List<SwapiStarship> findAllStarships() {
 		logger.trace("Getting list of all starships)");
 		return starshipService.getAllStarships();
 	}

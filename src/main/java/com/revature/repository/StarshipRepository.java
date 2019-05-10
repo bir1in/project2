@@ -2,15 +2,15 @@ package com.revature.repository;
 
 import java.util.List;
 
-import com.revature.model.Starship;
+import com.revature.model.SwapiStarship;
 
 public interface StarshipRepository {
 
-	void save(Starship starship);
-	List<Starship> findAll();
-	Starship findByName(String name);
+	void save(SwapiStarship starship);
+	List<SwapiStarship> findAll();
+	SwapiStarship findByName(String name);
 	// TODO: verify name of int
-	Starship findByCostInCredits(int cost_in_credits);
-	Starship findByPassengers(int passengers);
-	Starship findByCargo(int cargo);
+	SwapiStarship findByCostInCredits(int cost_in_credits);
+	SwapiStarship findByPassengers(int passengers);
+	SwapiStarship findByCargo(int cargo);
 }

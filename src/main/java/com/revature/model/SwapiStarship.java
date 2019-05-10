@@ -2,19 +2,24 @@ package com.revature.model;
 
 import javax.persistence.Entity;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 @Entity
-public class Starship {
+public class SwapiStarship {
 
 	private String name;
 
+	@JsonProperty("cost_in_credits")
 	private int cost_in_credits;
 
+	@JsonProperty("passengers")
 	private int passengers;
 
+	@JsonProperty("cargo")
 	private int cargo;
 
 	// no args constructor
-	public Starship() {
+	public SwapiStarship() {
 	}
 
 	/**
@@ -23,11 +28,43 @@ public class Starship {
 	 * @param passengers
 	 * @param cargo
 	 */
-	public Starship(String name, int cost_in_credits, int passengers, int cargo) {
+	public SwapiStarship(String name, int cost_in_credits, int passengers, int cargo) {
 		super();
 		this.name = name;
 		this.cost_in_credits = cost_in_credits;
 		this.passengers = passengers;
+		this.cargo = cargo;
+	}
+	
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getCost_in_credits() {
+		return cost_in_credits;
+	}
+
+	public void setCost_in_credits(int cost_in_credits) {
+		this.cost_in_credits = cost_in_credits;
+	}
+
+	public int getPassengers() {
+		return passengers;
+	}
+
+	public void setPassengers(int passengers) {
+		this.passengers = passengers;
+	}
+
+	public int getCargo() {
+		return cargo;
+	}
+
+	public void setCargo(int cargo) {
 		this.cargo = cargo;
 	}
 
@@ -56,7 +93,7 @@ public class Starship {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Starship other = (Starship) obj;
+		SwapiStarship other = (SwapiStarship) obj;
 		if (cargo != other.cargo)
 			return false;
 		if (cost_in_credits != other.cost_in_credits)

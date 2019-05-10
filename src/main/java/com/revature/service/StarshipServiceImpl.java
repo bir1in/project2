@@ -5,7 +5,7 @@ import java.util.List;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.revature.model.Starship;
+import com.revature.model.SwapiStarship;
 import com.revature.repository.StarshipRepository;
 
 public class StarshipServiceImpl implements StarshipService{
@@ -30,7 +30,7 @@ public class StarshipServiceImpl implements StarshipService{
 	
 
 	@Override
-	public List<Starship> getAllStarships() {
+	public List<SwapiStarship> getAllStarships() {
 		return starshipRepository.findAll();
 	}
 	public void setStarshipRepository(StarshipRepository starshipRepository) {
@@ -38,22 +38,22 @@ public class StarshipServiceImpl implements StarshipService{
 	}
 
 	@Override
-	public Starship getStarshipName(String name) {
+	public SwapiStarship getStarshipName(String name) {
 		return starshipRepository.findByName(name);
 	}
 
 	@Override
-	public Starship getStarshipCostInCredits(int cost_in_credits) {
+	public SwapiStarship getStarshipCostInCredits(int cost_in_credits) {
 		return starshipRepository.findByCostInCredits(cost_in_credits);
 	}
 
 	@Override
-	public Starship getStarShipPassengers(int passengers) {
+	public SwapiStarship getStarShipPassengers(int passengers) {
 		return starshipRepository.findByPassengers(passengers);
 	}
 
 	@Override
-	public Starship getStarshipCargo(int cargo) {
+	public SwapiStarship getStarshipCargo(int cargo) {
 		return starshipRepository.findByCargo(cargo);
 	}
 

@@ -6,11 +6,11 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.http.ResponseEntity;
 
-import com.revature.model.Starship;
+import com.revature.model.SwapiStarship;
 
 public interface StarshipController {
 
-	List<Starship> findAllStarships();
-	ResponseEntity<Starship> findAllStarships(Starship starship, HttpServletRequest request);
+	List<SwapiStarship> findAllStarships();
+	ResponseEntity<SwapiStarship> findAllStarships(SwapiStarship starship, HttpServletRequest request);
 	
 }
