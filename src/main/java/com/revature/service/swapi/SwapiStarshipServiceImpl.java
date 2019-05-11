@@ -18,6 +18,6 @@ public class SwapiStarshipServiceImpl implements SwapiStarshipService{
 	public SwapiStarship findSwapiStarshipById() {
 		Random rn = new Random();
 		int id = rn.nextInt(15 - 1 + 1) + 1;
-		return restTemplate.getForObject("https://swapi.co/api/starships/" + id, SwapiStarship.class);
+		return restTemplate.getForObject("https://swapi.co/api/starships/" + id+1, SwapiStarship.class);
 	}
 }

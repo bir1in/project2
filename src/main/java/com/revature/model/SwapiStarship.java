@@ -14,6 +14,7 @@ public class SwapiStarship {
 	
 	@JsonProperty("cost_in_credits")
 	private String costincredits;
+	
 	private String length;
 	
 	@JsonProperty("max_atmosphering_speed")
