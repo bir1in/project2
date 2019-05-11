@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.revature.ajax.ClientMessage;
-import com.revature.model.Input;
+
 import com.revature.model.SwapiPerson;
 import com.revature.model.SwapiPlanet;
 import com.revature.model.SwapiStarship;
