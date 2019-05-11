@@ -18,7 +18,7 @@ public class Driver {
 	private static Logger logger = Logger.getLogger(Driver.class);
 	public static void main(String[] args) {
 		//HeroService heroService = new HeroServiceImpl();
-		//ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+		ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 		//UserService userService = context.getBean("userService", UserService.class);
 		//logger.trace((heroService.registerHero(new Hero(0, "Spiderman", "Spider-sense", false))) ? "Spiderman registered sucessfully":"Could not register Spiderman");
 		//logger.trace((heroService.registerHero(new Hero(0, "Thor", "Lightning", true))) ? "Thor registered sucessfully":"Could not register Thor");
