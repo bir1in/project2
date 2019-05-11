@@ -55,6 +55,7 @@ public class CustomerController {
 	}
 	@GetMapping("/findPeople")
 	public SwapiPerson findPeopleById() {
+		System.out.println(swapiService.findSwapiPersonById());
 		return swapiService.findSwapiPersonById();
 	}
 	@GetMapping("/findPlanet")
