@@ -33,14 +33,18 @@
             <artifactId>spring-orm</artifactId>
             <version>4.3.9.RELEASE</version>
         </dependency>
-
+		
         <!-- Hibernate 4 -->
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
             <version>4.3.11.Final</version>
         </dependency>
-
+		<dependency>
+    <groupId>org.apache.httpcomponents</groupId>
+    <artifactId>httpclient</artifactId>
+    <version>4.5.8</version>
+</dependency>
         <!-- OJDBC 7 LOCAL REPO -->
         <dependency>
             <groupId>com.oracle</groupId>
