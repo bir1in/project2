@@ -36,10 +36,10 @@ public class UserRepositoryHibernate implements UserRepository {
 	}
 
 	@Override
-	public User findByName(String name) {
+	public User findByName(String username) {
 		try {
 			return (User) sessionFactory.getCurrentSession().createCriteria(User.class)
-				.add(Restrictions.like("USERNAME", name))
+				.add(Restrictions.like("username", username))
 				.list()
 				.get(0);
 		} catch (IndexOutOfBoundsException e) {

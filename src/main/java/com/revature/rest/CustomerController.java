@@ -25,21 +25,11 @@ import com.revature.service.swapi.SwapiStarshipService;
 public class CustomerController {
 	
 	@Autowired
-	private UserService userService;
-	@Autowired
 	private SwapiPersonService swapiService;
 	@Autowired 
 	private SwapiPlanetService swapiPService;
 	@Autowired 
 	private SwapiStarshipService swapiSService;
-	@PostMapping("/register")
-	public ClientMessage register(@RequestBody User user) {
-		if(userService.registerUser(user)) {
-			return new ClientMessage("User registered successfully");
-		} else {
-			return new ClientMessage("Something went wrong");
-		}
-	}
 	@GetMapping("/findPeople")
 	public SwapiPerson findPeopleById() {
 		return swapiService.findSwapiPersonById();
