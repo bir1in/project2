@@ -13,7 +13,7 @@ public class ViewControllerImpl implements ViewController {
 	@RequestMapping(value= {"/", "/index"}, method=RequestMethod.GET)
 	public String index() {
 		logger.trace("Return index.html to the user");
-		return "index";
+		return "index.html";
 	}
 	
 }

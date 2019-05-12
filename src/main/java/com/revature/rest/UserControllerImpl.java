@@ -25,15 +25,13 @@ import com.revature.service.UserService;
 
 @RestController("userController")
 @CrossOrigin(origins = "http://localhost:4200")
-@RequestMapping(path = "/users", produces = {MediaType.APPLICATION_JSON_VALUE})
+@RequestMapping(path = "/user", produces = {MediaType.APPLICATION_JSON_VALUE})
 public class UserControllerImpl implements UserController {
 
 	private static Logger logger = Logger.getLogger(UserControllerImpl.class);
 	
 	@Autowired
 	private UserService userService;
-	
-	//getmapping == requestmapping(mehtod=requestmethod.GET)
 	@GetMapping("/all")
 	public List<User> findAllUsers() {
 		logger.trace("Getting list of all users");
