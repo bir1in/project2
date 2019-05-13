@@ -32,8 +32,6 @@ public class UserControllerImpl implements UserController {
 	
 	@Autowired
 	private UserService userService;
-	
-	//getmapping == requestmapping(mehtod=requestmethod.GET)
 	@GetMapping("/all")
 	public List<User> findAllUsers() {
 		logger.trace("Getting list of all users");
