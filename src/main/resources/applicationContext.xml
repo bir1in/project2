@@ -31,9 +31,9 @@
 	<bean name="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" />
 		<!-- Remember to try to pull these from environment variables -->
-		<property name="url" value="jdbc:oracle:thin:@revaturetraining.c8tfwetqe4xi.us-west-2.rds.amazonaws.com:1521:ORCL" />
-		<property name="username" value="PROJECT2" />
-		<property name="password" value="p4ssw0rd" />
+		<property name="url" value="${PROJECT2_URL}" />
+		<property name="username" value="${PROJECT2_USERNAME}" />
+		<property name="password" value="${PROJECT2_PASSWORD}" />
 	</bean>
 	
 	<!-- SessionFactory (Hibernate) -->
